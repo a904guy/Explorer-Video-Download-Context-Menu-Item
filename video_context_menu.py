@@ -59,6 +59,9 @@ def download_video_dialog(directory):
         # Assuming yt-dlp is installed and added to PATH
         subprocess.run(["yt-dlp", video_url])
 
+        print('You can safely close this window now.')
+        input("Press Enter to exit...")
+
 # Main execution logic
 if __name__ == "__main__":
     # Check if "install" is in the command line arguments
