@@ -1,5 +1,5 @@
 # Explorer-Video-Download-Context-Menu-Item
-Explorer Video Download Context Menu Item
+This script will add a item to your right click context menu of a folder in File Explorer. From it you can download most videos just by entering their URL.
 
 ## To Install
 
