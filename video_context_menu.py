@@ -65,15 +65,20 @@ def download_video_dialog(directory):
     video_url = simpledialog.askstring("Download Video", "Enter the Video URL:")
     
     if video_url:
+        # Change to the directory where the context menu was clicked
         os.chdir(directory)
+        # Assuming yt-dlp is installed and added to PATH
         subprocess.run(["yt-dlp", video_url])
 
         print('You can safely close this window now.')
         input("Press Enter to exit...")
 
+# Main execution logic
 if __name__ == "__main__":
+    # Check if "install" is in the command line arguments
     if len(sys.argv) > 1 and sys.argv[1] == "--install":
         add_to_context_menu()
     else:
+        # The directory path should be the second argument, if present
         directory = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
         download_video_dialog(directory)
